@@ -1,9 +1,11 @@
 name: 'search-engines-urls-push'
 author: 3Alan
 description: 'push your urls to search engines, support google,bing,baidu'
-color: 'blue'
+branding:
+  icon: 'upload-cloud'
+  color: 'blue'
 inputs:
-  site:  # id of input
+  site: # id of input
     description: 'your site url'
     required: true
   sitemap:
@@ -11,7 +13,6 @@ inputs:
     required: true
   count:
     description: 'push urls count'
-    count: 10
   baidu-token:
     description: 'baidu token'
   bing-token:

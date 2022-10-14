@@ -16,14 +16,14 @@ try {
   request(sitemap).then(xml => {
     const urlList = xmlConvert
       .xml2js(xml, { compact: true })
-      .urlset.url.map(item => item.loc['_text'])
-      .slice(0, count);
+      .urlset.url.map(item => item.loc['_text']);
+    const submitUrlList = count ? urlList.slice(0, count) : urlList;
 
-    baiduToken && submitBaidu(urlList, baiduToken);
-    bingToken && submitBing(site, urlList, bingToken);
+    baiduToken && submitBaidu(submitUrlList, baiduToken);
+    bingToken && submitBing(site, submitUrlList, bingToken);
     googleClientEmail &&
       googlePrivateKey &&
-      submitGoogle(urlList, googleClientEmail, googlePrivateKey);
+      submitGoogle(submitUrlList, googleClientEmail, googlePrivateKey);
   });
 } catch (error) {
   core.setFailed(error.message);
