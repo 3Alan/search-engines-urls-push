@@ -1,6 +1,7 @@
 name: 'search-engines-urls-push'
 author: 3Alan
 description: 'push your urls to search engines, support google,bing,baidu'
+color: 'blue'
 inputs:
   site:  # id of input
     description: 'your site url'
