@@ -1,7 +1,7 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  search-engines-urls-push:
     runs-on: ubuntu-latest
     name: search-engines-urls-push
     steps:
@@ -9,8 +9,8 @@ jobs:
         id: search-engines-urls-push
         uses: 3Alan/search-engines-urls-push@v0.1.0
         with:
-          site: 'https://www.alanwang.site/'
-          sitemap: 'https://www.alanwang.site/sitemap.xml'
+          site: ${{ secrets.SITE }}
+          sitemap: ${{ secrets.SITEMAP }}
           count: ${{ secrets.COUNT }}
           bing-token: ${{ secrets.BING_TOKEN }}
           baidu-token: ${{ secrets.BAIDU_TOKEN }}
