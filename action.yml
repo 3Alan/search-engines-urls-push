@@ -1,0 +1,24 @@
+name: 'search-engines-urls-push'
+author: 3Alan
+description: 'push your urls to search engines, support google,bing,baidu'
+inputs:
+  site:  # id of input
+    description: 'your site url'
+    required: true
+  sitemap:
+    description: 'your sitemap url'
+    required: true
+  count:
+    description: 'push urls count'
+    count: 10
+  baidu-token:
+    description: 'baidu token'
+  bing-token:
+    description: 'bing token'
+  google-client-email:
+    description: 'google client email'
+  google-private-key:
+    description: 'google private key'
+runs:
+  using: 'node16'
+  main: 'index.js'
