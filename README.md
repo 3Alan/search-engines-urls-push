@@ -1,18 +1,14 @@
-# Hello world javascript action
+## Supported Search Engines
+- Google
+- Bing
+- Baidu
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+## Actions secrets
 
-## Inputs
+## Google secrets
 
-## `who-to-greet`
-
-**Required** The name of the person to greet. Default `"World"`.
-
-## Outputs
-
-## `time`
-
-The time we greeted you.
+## Bing token
+## Baidu token
 
 ## Example usage
 
