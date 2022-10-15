@@ -12,8 +12,8 @@ module.exports = async (urlList, token) => {
       body: data
     });
 
-    console.log(`baidu response : ${res}`);
+    console.log(`🎉baidu response : ${JSON.stringify(res)}`);
   } catch (error) {
-    console.log(`baidu error : ${error}`);
+    console.log(`❌baidu error : ${JSON.stringify(error)}`);
   }
 };

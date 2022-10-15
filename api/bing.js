@@ -16,8 +16,8 @@ module.exports = async (site, urlList, token) => {
       json: data
     });
 
-    console.log(`bing response : ${res}`);
+    console.log(`🎉bing response : ${JSON.stringify(res)}`);
   } catch (error) {
-    console.log(`bing error : ${error}`);
+    console.log(`❌bing error : ${JSON.stringify(error)}`);
   }
 };

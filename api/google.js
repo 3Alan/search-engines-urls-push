@@ -14,7 +14,7 @@ module.exports = async (urlList, clientEmail, key) => {
 
     jwtClient.authorize((err, tokens) => {
       if (err) {
-        console.log(`google authorize error: ${err}`);
+        console.log(`❌google authorize error: ${JSON.stringify(err)}`);
         return;
       }
 
@@ -33,10 +33,10 @@ module.exports = async (urlList, clientEmail, key) => {
         };
 
         const res = await request(options);
-        console.log(`google response : ${JSON.stringify(res)}`);
+        console.log(`🎉google response : ${JSON.stringify(res)}`);
       });
     });
   } catch (error) {
-    console.log(`google error : ${error}`);
+    console.log(`❌google error : ${JSON.stringify(error)}`);
   }
 };
