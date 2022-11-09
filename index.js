@@ -19,7 +19,7 @@ try {
       .urlset.url.map(item => item.loc['_text']);
     const submitUrlList = count ? urlList.slice(0, count) : urlList;
 
-    baiduToken && submitBaidu(submitUrlList, baiduToken);
+    baiduToken && submitBaidu(site, submitUrlList, baiduToken);
     bingToken && submitBing(site, submitUrlList, bingToken);
     googleClientEmail &&
       googlePrivateKey &&
