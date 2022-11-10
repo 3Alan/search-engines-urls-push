@@ -11,7 +11,7 @@ Use this Github Action to push your site urls to search engines(Google, Bing, Ba
 ## Example usage
 
 ```yml
-uses: 3Alan/search-engines-urls-push@v0.1.0
+uses: 3Alan/search-engines-urls-push@v0.2.3
 with:
   site: ${{ secrets.SITE }}
   sitemap: ${{ secrets.SITEMAP }}
@@ -36,7 +36,7 @@ with:
 
 ## Google secrets
 
-Follow the [tutorial](https://developers.google.com/search/apis/indexing-api/v3/prereqs), you will a json file containing the `private_key` and `client_email`
+Follow the [tutorial](https://developers.google.com/search/apis/indexing-api/v3/prereqs), you will get a json file containing the `private_key` and `client_email`
 
 ## Bing token
 
