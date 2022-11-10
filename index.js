@@ -19,11 +19,15 @@ try {
       .urlset.url.map(item => item.loc['_text']);
     const submitUrlList = count ? urlList.slice(0, count) : urlList;
 
-    baiduToken && submitBaidu(site, submitUrlList, baiduToken);
-    bingToken && submitBing(site, submitUrlList, bingToken);
-    googleClientEmail &&
-      googlePrivateKey &&
-      submitGoogle(submitUrlList, googleClientEmail, googlePrivateKey);
+    if (submitUrlList.length > 0) {
+      baiduToken && submitBaidu(site, submitUrlList, baiduToken);
+      bingToken && submitBing(site, submitUrlList, bingToken);
+      googleClientEmail &&
+        googlePrivateKey &&
+        submitGoogle(submitUrlList, googleClientEmail, googlePrivateKey);
+    } else {
+      console.log('❗ No url to submit!');
+    }
   });
 } catch (error) {
   core.setFailed(error.message);
