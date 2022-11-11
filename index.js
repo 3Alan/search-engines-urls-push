@@ -14,6 +14,7 @@ try {
   const googleClientEmail = core.getInput('google-client-email');
   const googlePrivateKey = core.getInput('google-private-key');
   request(sitemap).then(xml => {
+    // TODO: 或者直接从json文件中获取
     const urlList = xmlConvert
       .xml2js(xml, { compact: true })
       .urlset.url.map(item => item.loc['_text']);
