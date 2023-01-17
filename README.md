@@ -32,7 +32,7 @@ with:
 | google-client-email | client_email, [how to get it](https://github.com/3Alan/search-engines-urls-push#google-secrets) | false    |
 | google-private-key  | private_key, [how to get it](https://github.com/3Alan/search-engines-urls-push#google-secrets)  | false    |
 | bing-token          | Bing API Key, [how to get it](https://github.com/3Alan/search-engines-urls-push#bing-token)     | false    |
-| baidu-token         | [how to get it](https://github.com/3Alan/search-engines-urls-push-action#baidu-token)                  | false    |
+| baidu-token         | [how to get it](https://github.com/3Alan/search-engines-urls-push#baidu-token)                  | false    |
 
 ## Google secrets
 
